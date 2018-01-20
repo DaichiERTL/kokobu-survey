@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<html lang="ja">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="kokobu.css">
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" src="kokobu.js"></script>
+		<title>高校部アンケート入力用紙</title>
+	</head>
+	<body>
+		<h1>
+			高校部アンケート入力ページ
+		</h1>
+		<p>
+			数字と選択肢の対応：
+		</p>
+		<ol reversed>
+			<li>とてもそう</li>
+			<li>そう</li>
+			<li>あまりそうでない</li>
+			<li>まったくそうでない</li>
+		</ol>
+		<table id="myTable">
+			<tr>
+				<th>
+					項目
+				</th>
+				<th colspan="5">
+					入力内容
+				</th>
+			</tr>
+			<tr>
+				<td align="right">
+					校舎名
+				</td>
+				<td colspan="5">
+					いちのみやみなみ
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					氏名
+				</td>
+				<td colspan="5">
+					<input type="text" list="studentNameList" name="name" oninput="op.setStudentName()">
+					<datalist id="studentNameList">
+						<option value="野田一郎">
+						<option value="野田次郎">
+						<option value="野田三郎">
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					学年
+				</td>
+				<td id=grade1, onclick="op.ClickCell()">
+					高1
+				</td>
+				<td id=grade2, onclick="op.ClickCell()">
+					高2
+				</td>
+				<td id=grade3, onclick="op.ClickCell()">
+					高3
+				</td>
+				<td id=grade4, onclick="op.ClickCell()">
+					高卒
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					コース
+				</td>
+				<td colspan="2", onclick="op.ClickCell()">
+					高校進度
+				</td>
+				<td colspan="3", onclick="op.ClickCell()">
+					志望大学別
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					代ゼミ講師氏名
+				</td>
+				<td colspan="5">
+					<input id="yozemi", type="text", name="name", oninput="op.setValue(5, this.value, false)">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					受講科目
+				</td>
+				<td width="35", onclick="op.ClickCell()">
+					英
+				</td>
+				<td width="35", onclick="op.ClickCell()">
+					数
+				</td>
+				<td width="35", onclick="op.ClickCell()">
+					国
+				</td>
+				<td width="35", onclick="op.ClickCell()">
+					理
+				</td>
+				<td width="35", onclick="op.ClickCell()">
+					社
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					授業の分かりやすさ
+				</td>
+				<td onclick="op.ClickCell()">
+					4
+				</td>
+				<td onclick="op.ClickCell()">
+					3
+				</td>
+				<td onclick="op.ClickCell()">
+					2
+				</td>
+				<td onclick="op.ClickCell()">
+					1
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					学習意欲
+				</td>
+				<td onclick="op.ClickCell()">
+					4
+				</td>
+				<td onclick="op.ClickCell()">
+					3
+				</td>
+				<td onclick="op.ClickCell()">
+					2
+				</td>
+				<td onclick="op.ClickCell()">
+					1
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					学校・部活の忙しさ
+				</td>
+				<td onclick="op.ClickCell()">
+					4
+				</td>
+				<td onclick="op.ClickCell()">
+					3
+				</td>
+				<td onclick="op.ClickCell()">
+					2
+				</td>
+				<td onclick="op.ClickCell()">
+					1
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					授業の集中度
+				</td>
+				<td onclick="op.ClickCell()">
+					4
+				</td>
+				<td onclick="op.ClickCell()">
+					3
+				</td>
+				<td onclick="op.ClickCell()">
+					2
+				</td>
+				<td onclick="op.ClickCell()">
+					1
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					成績向上に対する授業の有用性
+				</td>
+				<td onclick="op.ClickCell()">
+					4
+				</td>
+				<td onclick="op.ClickCell()">
+					3
+				</td>
+				<td onclick="op.ClickCell()">
+					2
+				</td>
+				<td onclick="op.ClickCell()">
+					1
+				</td>
+
+			</tr>
+			<tr>
+				<td align="right">
+					担任講師氏名
+				</td>
+				<td colspan="5">
+					<input id="tutor", type="text", name="name", oninput="op.setValue(12, this.value, false)">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					担任講師の熱意
+				</td>
+				<td onclick="op.ClickCell()">
+					4
+				</td>
+				<td onclick="op.ClickCell()">
+					3
+				</td>
+				<td onclick="op.ClickCell()">
+					2
+				</td>
+				<td onclick="op.ClickCell()">
+					1
+				</td>
+
+			</tr>
+			<tr>
+				<td align="right">
+					本日の塾・授業の楽しさ
+				</td>
+				<td onclick="op.ClickCell()">
+					4
+				</td>
+				<td onclick="op.ClickCell()">
+					3
+				</td>
+				<td onclick="op.ClickCell()">
+					2
+				</td>
+				<td onclick="op.ClickCell()">
+					1
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					単語テスト進捗
+				</td>
+				<td colspan="5">
+					<input id="word", type="text", name="name", oninput="op.setValue(15, this.value, false)">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+
+				</td>
+				<td colspan="5">
+					<input type="button" value="Submit" onclick="alert(valueList)">
+					<input type="button" value="Submit" onclick="jump.submit()">
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+<!--
+	entry.2051379942 = 校舎名
+	entry.145066371  = 生徒氏名
+	entry.245708505  = 高3
+	entry.950733399  = 高校進度対応コース
+	entry.1677092645 = よぜみこうしめい
+	entry.958921360  = 英語（複数選択できない）
+	entry.1094300140 = とてもわかりやすかった
+	entry.917395982  = とても前向きに学習できている
+	entry.156270085  = とても忙しい
+	entry.1875463355 = とても集中できた
+	entry.23034015   = とても役に立った
+	entry.932576748  = 講師氏名
+	entry.254725833  = とても熱心に指導してくれた
+	entry.1410177112 = とても楽しかった
+	entry.306974533  = 1234
+-->
